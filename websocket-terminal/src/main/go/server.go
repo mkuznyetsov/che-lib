@@ -196,7 +196,7 @@ func init() {
 func main() {
 	flag.Parse()
 
-	http.HandleFunc("/pty", ptyHandler)
+	http.HandleFunc("/pty/", ptyHandler)
 
 	// serve html & javascript
 	http.Handle("/", http.FileServer(http.Dir(staticFlag)))
