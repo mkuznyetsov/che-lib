@@ -58,8 +58,8 @@
                         </goals>
                         <configuration>
                             <target>
-                                <copy file="src/main/resources/index.html" todir="${project.zip.dir}" />
-                                <copy file="src/main/resources/term.js" todir="${project.zip.dir}" />
+                                <copy file="src/main/resources/index.html" todir="${project.zip.dir}/linux_amd64" />
+                                <copy file="src/main/resources/term.js" todir="${project.zip.dir}/linux_amd64" />
                                 <copy file="src/main/go/server.go" todir="${project.go.build.dir}" />
                             </target>
                         </configuration>
@@ -72,8 +72,8 @@
                         </goals>
                         <configuration>
                             <target>
-                                <copy file="${project.go.build.dir}/terminal" todir="${project.zip.dir}" />
-                                <chmod file="${project.zip.dir}/terminal" perm="+x" />
+                                <copy file="${project.go.build.dir}/terminal" todir="${project.zip.dir}/linux_amd64" />
+                                <chmod file="${project.zip.dir}/linux_amd64/terminal" perm="+x" />
                             </target>
                         </configuration>
                     </execution>
