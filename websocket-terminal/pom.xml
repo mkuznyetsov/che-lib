@@ -72,8 +72,8 @@
                         </goals>
                         <configuration>
                             <target>
-                                <copy file="${project.go.build.dir}/terminal" todir="${project.zip.dir}/linux_amd64" />
-                                <chmod file="${project.zip.dir}/linux_amd64/terminal" perm="+x" />
+                                <copy file="${project.go.build.dir}/terminal" tofile="${project.zip.dir}/linux_amd64/che-websocket-terminal" />
+                                <chmod file="${project.zip.dir}/linux_amd64/che-websocket-terminal" perm="+x" />
                             </target>
                         </configuration>
                     </execution>
